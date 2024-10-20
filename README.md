@@ -41,5 +41,5 @@ For Chocolate Data Analysis,we use 3 Datasets-Shipment Data,Calender Table,Dimen
 
 ### Preparing Data For Analysis.
 ---
-'''dax
+``` dax
 Total Sales = SUM(shipments[Sales])
