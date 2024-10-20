@@ -164,7 +164,7 @@ DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
 6.Created a Table chart which indicated all the Product details.
 ![Product Details](https://github.com/user-attachments/assets/cc317190-8689-4aae-ba6d-cdd09ce79b9c)
 ---
-###Final Dashboard
+### Final Dashboard
 ![Sales Analytics SS](https://github.com/user-attachments/assets/d537fc8e-97b3-4283-be14-0a5018378346)
 
 
