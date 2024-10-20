@@ -41,5 +41,112 @@ For Chocolate Data Analysis,we use 3 Datasets-Shipment Data,Calender Table,Dimen
 
 ### Preparing Data For Analysis.
 ---
+1.Created a Measure for Total Sales.
 ``` dax
 Total Sales = SUM(shipments[Sales])
+```
+2.Created a measure for Total Cost.
+``` dax
+Total Costs = SUM(shipments[Costs])
+```
+3.Created a measure for Total Profit.
+``` dax
+Total Profit = [Total Sales]-[Total Costs]
+```
+4.Created a measure for Profit %.
+``` dax
+Total profit % = DIVIDE([Total Profit],[Total Sales])
+```
+5.Created a measure for Total Shipments.
+``` dax
+Total Shipments = COUNTROWS(shipments)
+```
+6.Created a measure for Total Boxes.
+``` dax
+Total Boxes = SUM(shipments[Boxes])
+```
+7.Created a meaure for LBS Counts.
+``` dax
+LBS Count = CALCULATE([Total Shipments],shipments[Boxes]<50)
+```
+8.Created a measure for LBS %.
+``` dax
+LBS % = DIVIDE([LBS Count],[Total Shipments])
+```
+9.Created a measure for Latest Date.
+``` dax
+Latest Date = LASTDATE('calendar'[Start of Month])
+```
+10.Created a measure for total sales latest Month.
+``` dax
+Total Sales Latest Month = 
+var ld=[Latest Date]
+RETURN
+CALCULATE([Total Sales],'calendar'[Start of Month]=ld)
+```
+11.Created a measure for total profit latest Month.
+``` dax
+Total Profit Latest Month = 
+var ld=[Latest Date]
+RETURN
+CALCULATE([Total Profit],'calendar'[Start of Month]=ld)
+```
+12.Created a measure for MoM Profit %
+``` dax
+MoM Profit% = 
+var this_month=[Total Profit]
+var prev_month=CALCULATE([Total Profit],PREVIOUSDAY('calendar'[Date]))
+RETURN
+DIVIDE(this_month-prev_month,prev_month)
+```
+13.Created a measure for total sales previos month.
+``` dax
+Total Sales (prev month) = CALCULATE([Total Sales],PREVIOUSMONTH('calendar'[Date]))
+```
+14.Created a measure for Total Boxes latest month.
+``` dax
+Total Boxes Latest Month = 
+var ld=[Latest Date]
+RETURN
+CALCULATE([Total Boxes],'calendar'[Start of Month]=ld)
+```
+15.Created a measure for Latest MoM Cost Change%.
+``` dax
+Latest MoM Cost Change % = 
+var ld=[Latest Date]
+var this_month_cost=[Total Cost Latest Month]
+var prev_month_cost=CALCULATE([Total Costs],'calendar'[Start of Month]=EDATE(ld,-1))
+RETURN
+DIVIDE(this_month_cost-prev_month_cost,prev_month_cost)
+```
+16.Created a measure for latest shipments %.
+``` dax
+MoM Shipments change % = 
+var this_month=[Total Shipments]
+var prev_month=CALCULATE([Total Shipments],PREVIOUSDAY('calendar'[Date]))
+RETURN
+DIVIDE(this_month-prev_month,prev_month)
+```
+17.Created a measure for latest mom sales change%.
+``` dax
+Latest MoM Sales Change% = 
+var ld=[Latest Date]
+var this_month_sales=[Total Sales Latest Month]
+var prev_month_sales=CALCULATE([Total Sales],'calendar'[Start of Month]=EDATE(ld,-1))
+RETURN
+DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
+```
+18.Created a measure for latest mom boxes change %.
+``` dax
+Latest Mom Boxes Change % = 
+var ld=[Latest Date]
+var this_month_sales=[Total Boxes Latest Month]
+var prev_month_sales=CALCULATE([Total Boxes],'calendar'[Start of Month]=EDATE(ld,-1))
+RETURN
+DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
+```
+### Final PowerBi Dashboard.
+![Dashboard Preview](![Sales Analytics SS](https://github.com/user-attachments/assets/35d075fc-5c62-4ae2-8076-43199f041ae3)
+)
+
+
