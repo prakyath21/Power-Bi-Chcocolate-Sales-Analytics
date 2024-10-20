@@ -145,8 +145,10 @@ var prev_month_sales=CALCULATE([Total Boxes],'calendar'[Start of Month]=EDATE(ld
 RETURN
 DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
 ```
-### Final PowerBi Dashboard.
-![Sales Analytics SS](https://github.com/user-attachments/assets/35d075fc-5c62-4ae2-8076-43199f041ae3)
+### Visualizations.
+1.Used a name card visual for all the KPI which consists of Total Sales,Total Boxes,Total Costs,Total Profit,Total Shipments.
+![kpi](https://github.com/user-attachments/assets/7d26da13-b400-45ac-8fa2-5764e21b0d35)
+
 
 
 
