@@ -148,6 +148,30 @@ DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
 ### Visualizations.
 1.Used a name card visual for all the KPI which consists of Total Sales,Total Boxes,Total Costs,Total Profit,Total Shipments.
 ![kpi](https://github.com/user-attachments/assets/7d26da13-b400-45ac-8fa2-5764e21b0d35)
+---
+2.Created a line chart which indicates all the insights for the kpi.
+![Sales by start of month](https://github.com/user-attachments/assets/8e153067-d1ae-41be-8c9a-0606ecff1a91)
+---
+3.Created a Gauge Chart For the profit indicator.
+![image](https://github.com/user-attachments/assets/cae27d5d-f63e-4fd1-a972-cf874321638c)
+---
+4.Created a stacked Column chart for shipment analysis.
+![Shipment Analysis](https://github.com/user-attachments/assets/c304d26d-28c1-4674-a465-d067201fa509)
+---
+5.Created a Table Visual which indicated all the sales person details and their contributions.
+![Sales details](https://github.com/user-attachments/assets/ed184e53-72ba-4186-8c8d-0316bbc23618)
+---
+6.Created a Table chart which indicated all the Product details.
+![Product Details](https://github.com/user-attachments/assets/cc317190-8689-4aae-ba6d-cdd09ce79b9c)
+---
+###Final Dashboard
+![Sales Analytics SS](https://github.com/user-attachments/assets/d537fc8e-97b3-4283-be14-0a5018378346)
+
+
+
+
+
+
 
 
 
