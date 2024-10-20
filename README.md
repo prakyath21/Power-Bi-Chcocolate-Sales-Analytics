@@ -1,4 +1,5 @@
 ### PowerBi Chocolates Sales Analytics Dashboard
+--- 
 Description:
 This dashboard provides a comprehensive overview of the sales performance, profitability, and shipment metrics for Awesome Chocolates. It offers insights into various aspects of the business, including product-wise sales, profit margins, shipment analysis, and regional performance.
 
