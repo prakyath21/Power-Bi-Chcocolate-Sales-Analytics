@@ -146,7 +146,7 @@ RETURN
 DIVIDE(this_month_sales-prev_month_sales,prev_month_sales)
 ```
 ### Final PowerBi Dashboard.
-![Dashboard Preview](![Sales Analytics SS](https://github.com/user-attachments/assets/35d075fc-5c62-4ae2-8076-43199f041ae3)
+(![Sales Analytics SS](https://github.com/user-attachments/assets/35d075fc-5c62-4ae2-8076-43199f041ae3)
 
 
 
